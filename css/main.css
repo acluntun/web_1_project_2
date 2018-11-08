@@ -1,0 +1,257 @@
+@font-face { 
+    font-family: blanch;
+    src: url('../assets/fonts/blanch/BLANCH_CAPS_LIGHT.ttf');
+}
+
+@font-face { 
+    font-family: museo;
+    src: url('../assets/fonts/museo/museo-300-webfont.woff');
+}
+
+body { 
+    background: url(../assets/textures/fabric_plaid.png);
+    color: dimgray;
+    font-family: blanch;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* START NAV */
+
+nav, .nav-sec, .nav-menu, .nav-right, .nav-login {
+    display: flex;
+}
+
+header {
+    margin: 1em;
+    display: relative;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+.nav-sec {
+    justify-content: space-between;
+    align-content: space-around;
+    margin: auto 15px;
+}
+
+.nav-right {
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 10em;
+}
+
+.nav-menu {
+    width: 20rem;
+    margin: auto 5px;
+    justify-content: space-between;
+}
+
+a {
+    color: dimgray;
+    text-transform: uppercase;
+    align-content: space-between;
+    text-decoration: none;
+}
+
+nav section {
+    justify-content: space-around;
+    align-content: flex-end;
+}
+
+.nav-login {
+    width: 10em;
+    float: right;
+}
+
+.icon {
+    width: 20px;
+    border-radius: 4px;
+}
+
+/* END NAV */
+/* START MAIN */
+.content {
+    font-family: museo;
+    text-align: center;
+}
+
+.header-img {
+    border: solid white 10px;
+    width: 95%;
+    height: 30rem;
+    background: url(../assets/pics/back.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem auto;
+    position: relative;
+}
+
+#header-img-text {
+    position: absolute;
+    background: rgba(58, 58, 56, 0.747);
+    text-align: right;
+    bottom: 0;
+    color: white;
+    font-family: museo;
+    width: 100%;
+}
+
+#header-img-text p {
+    padding: 5px 10px;
+}
+
+.arrow-icon {
+    height: 3em;
+    /*weborder: none;*/
+}
+/*
+.arrows {
+    position: absolute;
+    top: 25em;
+}*/
+
+#left-arrow, #right-arrow {
+    top: 15rem;
+    position: absolute;
+}
+
+#left-arrow {
+    left: -1rem;
+}
+
+#right-arrow {
+    right: -1rem;
+}
+.content-sec{
+    display: flex;
+    flex-wrap: wrap;
+}
+#main-content {
+    width: 59%;
+}
+#main-content-right{
+    width: 39%;
+}
+#alt-view img {
+    width: 28%;
+    margin: 0.8em;
+    border: solid white 5px;
+}
+.recent-post-div {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.recent-post-div img, .recent-post-div video, .recent-post-div iframe {
+    width: 300px;
+    height: 10rem;
+    margin: 1.9rem;
+    border: solid dimgray 1px;
+    float: left;
+    text-align: center;
+}
+main section  #more-div {
+    background:linear-gradient(0deg,rgba(183, 183, 176, 0.699),rgba(183, 183, 176, 0.7)),url(../assets/textures/az_subtle.png);
+    clear: both;
+    width: 150px;
+    line-height: 2em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+section #main-h1 {
+    margin-left: 9em;
+}
+/* END MAIN */
+/* START FOOTER */
+footer {
+    height: 15em;
+    background:linear-gradient(0deg,rgba(183, 183, 176, 0.699),rgba(183, 183, 176, 0.7)),url(../assets/textures/az_subtle.png);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /*position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;*/
+    justify-content: end;
+}
+
+.foot-div {
+    background-color: rgb(102, 102, 102);
+    color: white;
+    font-family: museo;
+    padding: 0.1em;
+    text-align: center;
+}
+
+.foot-main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-col {
+    width: 29%;
+    font-size: 0.7rem;
+    margin: 1.2em;
+}
+
+.footer-col .nav-logo img {
+    width: 60px;
+}
+
+h1 {
+    color: dimgray;
+    text-transform: uppercase;
+    font-family: museo;
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-align: left;
+}
+
+h3 {
+    color: white;
+    font-family: museo;
+}
+
+input {
+    width: 100%;
+}
+
+.footer-col .recent-post-div img, .footer-col .recent-post-div video, .footer-col .recent-post-div iframe{
+    width: 20%;
+    height: 3rem;
+    margin: 0.5em;
+}
+/* END FOOTER */
+
+@media screen and (max-width: 1024px) {
+
+    .recent-post-div {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .recent-post-div img, .recent-post-div video, .recent-post-div iframe {
+        width: 30%;
+        height: 10rem;
+        margin: 0.8rem;
+        border: solid dimgray 1px;
+        float: left;
+        text-align: center;
+    }
+    #footer-gallery {
+        display: none;
+    }
+
+    .footer-col {
+        width: 45%;
+        font-size: 0.9rem;
+        margin: 2em;
+        
+    }
+}
