@@ -132,10 +132,38 @@ nav section {
     flex-wrap: wrap;
 }
 #main-content {
-    width: 59%;
+    width: 70%;
 }
 #main-content-right{
-    width: 39%;
+    margin-top: 20px;
+    width: 25%;
+    
+}
+
+#main-content-right div {
+    background-color: white;
+    font-family: museo;
+    padding: 5px;
+    margin: 15px;
+}
+
+#pp-img {
+    width: 70%;
+}
+
+#personal-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about-sec p{
+    margin: 9px;
+}
+
+
+#personal-info p {
+    text-align: right;
 }
 #alt-view img {
     width: 28%;
@@ -155,17 +183,28 @@ nav section {
     float: left;
     text-align: center;
 }
-main section  #more-div {
+.grid {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+#more-div {
     background:linear-gradient(0deg,rgba(183, 183, 176, 0.699),rgba(183, 183, 176, 0.7)),url(../assets/textures/az_subtle.png);
     clear: both;
     width: 150px;
+    height: 2em;
     line-height: 2em;
     text-align: center;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 
 section #main-h1 {
-    margin-left: 9em;
+    margin-left: 4em;
+    font-size: 1em;
+    clear: both;
 }
 /* END MAIN */
 /* START FOOTER */
@@ -173,6 +212,7 @@ footer {
     height: 15em;
     background:linear-gradient(0deg,rgba(183, 183, 176, 0.699),rgba(183, 183, 176, 0.7)),url(../assets/textures/az_subtle.png);
     margin: 0;
+    margin-top: 20px;
     padding: 0;
     width: 100%;
     /*position: absolute;
