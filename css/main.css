@@ -186,10 +186,12 @@ nav section {
 .grid {
     margin-top: 2em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     align-items: center;
     align-content: center;
+    width: 97%;
+    margin: 0 auto;
 }
 #more-div {
     background:linear-gradient(0deg,rgba(183, 183, 176, 0.699),rgba(183, 183, 176, 0.7)),url(../assets/textures/az_subtle.png);
