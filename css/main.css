@@ -1,17 +1,20 @@
 @font-face { 
-    font-family: blanch;
-    src: url('../assets/fonts/blanch/BLANCH_CAPS_LIGHT.ttf');
+    font-family: "blanch";
+    src: url('../assets/fonts/blanch/BLANCH_CAPS_LIGHT.ttf') format("woff");
 }
 
 @font-face { 
-    font-family: museo;
-    src: url('../assets/fonts/museo/museo-300-webfont.woff');
+    font-family: "museo";
+    src: url('../assets/fonts/museo/museo-300-webfont.woff') format('woff'),
+    url('museo-300-webfont.ttf') format('truetype'),
+    url('museo-300-webfont.svg') format('svg'), 
+    url('museo-300-webfont.eot');
 }
 
 body { 
     background: url(../assets/textures/fabric_plaid.png);
     color: dimgray;
-    font-family: blanch;
+    font-family: "museo";
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,6 +24,10 @@ body {
 
 nav, .nav-sec, .nav-menu, .nav-right, .nav-login {
     display: flex;
+}
+
+header nav .nav-logo {
+    margin-right: 10px;
 }
 
 header {
@@ -75,7 +82,7 @@ nav section {
 /* END NAV */
 /* START MAIN */
 .content {
-    font-family: museo;
+    font-family: "museo";
     text-align: center;
 }
 
@@ -97,7 +104,7 @@ nav section {
     text-align: right;
     bottom: 0;
     color: white;
-    font-family: museo;
+    font-family:  "museo";
     width: 100%;
 }
 
@@ -142,13 +149,14 @@ nav section {
 
 #main-content-right div {
     background-color: white;
-    font-family: museo;
+    font-family:  "museo";
     padding: 5px;
-    margin: 15px;
+    margin-top: 15px;
 }
 
 #pp-img {
     width: 70%;
+    justify-content: right;
 }
 
 #personal-info {
@@ -158,15 +166,15 @@ nav section {
 }
 
 #about-sec p{
-    margin: 9px;
+    margin-top: 9px;
+    padding: 9px;
 }
-
 
 #personal-info p {
     text-align: right;
 }
 #alt-view img {
-    width: 28%;
+    width: 30%;
     margin: 0.8em;
     border: solid white 5px;
 }
@@ -176,15 +184,14 @@ nav section {
     position: relative;
 }
 .recent-post-div img, .recent-post-div video, .recent-post-div iframe {
-    width: 300px;
-    height: 10rem;
+    width: 100%;
     margin: 1.9rem;
+    margin-left: 0;
     border: solid dimgray 1px;
     float: left;
     text-align: center;
 }
 .grid {
-    margin-top: 2em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
@@ -204,7 +211,7 @@ nav section {
 }
 
 section #main-h1 {
-    margin-left: 4em;
+    margin: 4em 0 0 4em;
     font-size: 1em;
     clear: both;
 }
@@ -227,7 +234,7 @@ footer {
 .foot-div {
     background-color: rgb(102, 102, 102);
     color: white;
-    font-family: museo;
+    font-family:  "museo";
     padding: 0.1em;
     text-align: center;
 }
@@ -250,7 +257,7 @@ footer {
 h1 {
     color: dimgray;
     text-transform: uppercase;
-    font-family: museo;
+    font-family:  "museo";
     font-weight: bold;
     font-size: 0.7rem;
     text-align: left;
@@ -258,7 +265,7 @@ h1 {
 
 h3 {
     color: white;
-    font-family: museo;
+    font-family:  "museo";
 }
 
 input {
@@ -274,7 +281,7 @@ input {
 
 @media screen and (max-width: 1024px) {
 
-    .recent-post-div {
+    /*.recent-post-div {
         width: 90%;
         margin: 0 auto;
     }
@@ -285,6 +292,9 @@ input {
         border: solid dimgray 1px;
         float: left;
         text-align: center;
+    }*/
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
     }
     #footer-gallery {
         display: none;
@@ -293,7 +303,11 @@ input {
     .footer-col {
         width: 45%;
         font-size: 0.9rem;
-        margin: 2em;
-        
+        margin: 2em; 
+    }
+
+    #alt-view img {
+        width: 25%;
+        margin: 0.5em;
     }
 }
